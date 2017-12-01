@@ -1,0 +1,156 @@
+[gd_scene load_steps=10 format=1]
+
+[ext_resource path="res://world/building/asset/texture/wall_corner.png" type="Texture" id=1]
+[ext_resource path="res://world/building/asset/texture/wall_tcorner.png" type="Texture" id=2]
+[ext_resource path="res://world/building/asset/texture/wall_straight.png" type="Texture" id=3]
+[ext_resource path="res://world/building/asset/texture/wall_opening.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 36, 36 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 36, 48 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 24, 48 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 24, 6 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 24, 6 )
+
+[node name="building" type="Node2D"]
+
+[node name="wall_corner" type="Sprite" parent="."]
+
+editor/display_folded = true
+texture = ExtResource( 1 )
+
+[node name="physics" type="StaticBody2D" parent="wall_corner"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 12, -12 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="collision" type="CollisionShape2D" parent="wall_corner/physics"]
+
+transform/pos = Vector2( 12, -12 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="wall_tcorner" type="Sprite" parent="."]
+
+editor/display_folded = true
+texture = ExtResource( 2 )
+
+[node name="physics" type="StaticBody2D" parent="wall_tcorner"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 12, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="collision" type="CollisionShape2D" parent="wall_tcorner/physics"]
+
+transform/pos = Vector2( 12, 0 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="wall_straight" type="Sprite" parent="."]
+
+editor/display_folded = true
+texture = ExtResource( 3 )
+
+[node name="physics" type="StaticBody2D" parent="wall_straight"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="collision" type="CollisionShape2D" parent="wall_straight/physics"]
+
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[node name="wall_opening" type="Sprite" parent="."]
+
+editor/display_folded = true
+texture = ExtResource( 4 )
+
+[node name="physics1" type="StaticBody2D" parent="wall_opening"]
+
+editor/display_folded = true
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, -42 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="collision" type="CollisionShape2D" parent="wall_opening/physics1"]
+
+transform/pos = Vector2( 0, -42 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="physics2" type="StaticBody2D" parent="wall_opening"]
+
+editor/display_folded = true
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 42 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="collision" type="CollisionShape2D" parent="wall_opening/physics2"]
+
+transform/pos = Vector2( 0, 42 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+
+

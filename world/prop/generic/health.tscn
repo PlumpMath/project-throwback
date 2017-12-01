@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://world/prop/generic/health.gd" type="Script" id=1]
+[ext_resource path="res://world/lighting/asset/texture/spot_128x128.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 25.0
+
+[node name="health" type="Area2D"]
+
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitorable = false
+script/script = ExtResource( 1 )
+amount = 0
+texture = null
+
+[node name="model" type="TextureFrame" parent="."]
+
+rect/scale = Vector2( 0.3, 0.3 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -20.0
+margin/top = -20.0
+margin/right = 20.0
+margin/bottom = 20.0
+stretch_mode = 0
+
+[node name="collision" type="CollisionShape2D" parent="."]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="light" type="Light2D" parent="."]
+
+enabled = true
+editor_only = false
+texture = ExtResource( 2 )
+offset = Vector2( 0, 0 )
+scale = 1.0
+color = Color( 1, 0, 0, 1 )
+energy = 0.25
+mode = 0
+range/height = 0.0
+range/z_min = -1024
+range/z_max = 1024
+range/layer_min = 0
+range/layer_max = 0
+range/item_mask = 1
+shadow/enabled = false
+shadow/color = Color( 0, 0, 0, 0 )
+shadow/buffer_size = 2048
+shadow/esm_multiplier = 80.0
+shadow/item_mask = 1
+
+[connection signal="body_enter" from="." to="." method="_on_health_body_enter"]
+
+[connection signal="body_exit" from="." to="." method="_on_health_body_exit"]
+
+

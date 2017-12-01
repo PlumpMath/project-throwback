@@ -1,0 +1,148 @@
+[gd_scene format=1]
+
+[node name="game" type="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="container" type="TabContainer" parent="."]
+
+editor/display_folded = true
+rect/min_size = Vector2( 800, 600 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 800.0
+margin/bottom = 600.0
+tab_align = 1
+tabs_visible = true
+
+[node name="Brief" type="Tabs" parent="container"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = 32.0
+margin/right = 4.0
+margin/bottom = 4.0
+
+[node name="Character" type="Tabs" parent="container"]
+
+visibility/visible = false
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = 32.0
+margin/right = 4.0
+margin/bottom = 4.0
+
+[node name="Game" type="Tabs" parent="container"]
+
+visibility/visible = false
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = 32.0
+margin/right = 4.0
+margin/bottom = 4.0
+
+[node name="container" type="VBoxContainer" parent="container/Game"]
+
+rect/min_size = Vector2( 128, 420 )
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 20.0
+margin/top = 20.0
+margin/right = 148.0
+margin/bottom = 440.0
+custom_constants/separation = 32
+alignment = 0
+
+[node name="btn_menu_save" type="Button" parent="container/Game/container"]
+
+rect/min_size = Vector2( 128, 32 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 128.0
+margin/bottom = 32.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Save"
+flat = false
+
+[node name="btn_menu_load" type="Button" parent="container/Game/container"]
+
+rect/min_size = Vector2( 128, 32 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 64.0
+margin/right = 128.0
+margin/bottom = 96.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Load"
+flat = false
+
+[node name="spacer" type="TextureFrame" parent="container/Game/container"]
+
+rect/min_size = Vector2( 128, 228 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 128.0
+margin/right = 128.0
+margin/bottom = 356.0
+stretch_mode = 0
+
+[node name="btn_action_quit" type="Button" parent="container/Game/container"]
+
+rect/min_size = Vector2( 128, 32 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 388.0
+margin/right = 128.0
+margin/bottom = 420.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Quit"
+flat = false
+
+

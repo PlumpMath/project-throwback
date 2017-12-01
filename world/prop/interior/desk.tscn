@@ -1,0 +1,7 @@
+[gd_scene format=1]
+
+[node name="desk" type="Node2D"]
+
+[node name="left" type="Sprite" parent="."]
+
+

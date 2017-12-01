@@ -1,0 +1,141 @@
+[gd_scene load_steps=28 format=1]
+
+[ext_resource path="res://world/prop/interior/asset/texture/tile_474.png" type="Texture" id=1]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_475.png" type="Texture" id=2]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_476.png" type="Texture" id=3]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_477.png" type="Texture" id=4]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_478.png" type="Texture" id=5]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_447.png" type="Texture" id=6]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_448.png" type="Texture" id=7]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_449.png" type="Texture" id=8]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_450.png" type="Texture" id=9]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_451.png" type="Texture" id=10]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_507.png" type="Texture" id=11]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_508.png" type="Texture" id=12]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_509.png" type="Texture" id=13]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_510.png" type="Texture" id=14]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_506.png" type="Texture" id=15]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_452.png" type="Texture" id=16]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_479.png" type="Texture" id=17]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_529.png" type="Texture" id=18]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_530.png" type="Texture" id=19]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_531.png" type="Texture" id=20]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_501.png" type="Texture" id=21]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_502.png" type="Texture" id=22]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_503.png" type="Texture" id=23]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_505.png" type="Texture" id=24]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_323.png" type="Texture" id=25]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_297.png" type="Texture" id=26]
+[ext_resource path="res://world/prop/interior/asset/texture/tile_296.png" type="Texture" id=27]
+
+[node name="furniture" type="Node2D"]
+
+[node name="sofa_tan_l" type="Sprite" parent="."]
+
+texture = ExtResource( 1 )
+
+[node name="sofa_tan_m" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+
+[node name="sofa_tan_r" type="Sprite" parent="."]
+
+texture = ExtResource( 3 )
+
+[node name="club_tan" type="Sprite" parent="."]
+
+texture = ExtResource( 4 )
+
+[node name="chair_tan" type="Sprite" parent="."]
+
+texture = ExtResource( 5 )
+
+[node name="sofa_green_l" type="Sprite" parent="."]
+
+texture = ExtResource( 6 )
+
+[node name="sofa_green_m" type="Sprite" parent="."]
+
+texture = ExtResource( 7 )
+
+[node name="sofa_green_r" type="Sprite" parent="."]
+
+texture = ExtResource( 8 )
+
+[node name="club_green" type="Sprite" parent="."]
+
+texture = ExtResource( 9 )
+
+[node name="chair_blue" type="Sprite" parent="."]
+
+texture = ExtResource( 10 )
+
+[node name="desk_lg_l" type="Sprite" parent="."]
+
+texture = ExtResource( 11 )
+
+[node name="desk_lg_m" type="Sprite" parent="."]
+
+texture = ExtResource( 12 )
+
+[node name="desk_lg_r" type="Sprite" parent="."]
+
+texture = ExtResource( 13 )
+
+[node name="desk_sm" type="Sprite" parent="."]
+
+texture = ExtResource( 14 )
+
+[node name="desk_round" type="Sprite" parent="."]
+
+texture = ExtResource( 15 )
+
+[node name="table_sm" type="Sprite" parent="."]
+
+texture = ExtResource( 16 )
+
+[node name="table_round" type="Sprite" parent="."]
+
+texture = ExtResource( 17 )
+
+[node name="chair_office_01" type="Sprite" parent="."]
+
+texture = ExtResource( 18 )
+
+[node name="chair_office_02" type="Sprite" parent="."]
+
+texture = ExtResource( 19 )
+
+[node name="chair_office_03" type="Sprite" parent="."]
+
+texture = ExtResource( 20 )
+
+[node name="sofa_black_l" type="Sprite" parent="."]
+
+texture = ExtResource( 21 )
+
+[node name="sofa_black_m" type="Sprite" parent="."]
+
+texture = ExtResource( 22 )
+
+[node name="sofa_black_r" type="Sprite" parent="."]
+
+texture = ExtResource( 23 )
+
+[node name="club_black" type="Sprite" parent="."]
+
+texture = ExtResource( 24 )
+
+[node name="sink" type="Sprite" parent="."]
+
+texture = ExtResource( 25 )
+
+[node name="stove_top_01" type="Sprite" parent="."]
+
+texture = ExtResource( 26 )
+
+[node name="stove_top_02" type="Sprite" parent="."]
+
+texture = ExtResource( 27 )
+
+

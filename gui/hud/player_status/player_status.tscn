@@ -1,0 +1,139 @@
+[gd_scene load_steps=7 format=1]
+
+[ext_resource path="res://gui/hud/player_status/player_status.gd" type="Script" id=1]
+[ext_resource path="res://gui/asset/graphic/hud_status_health_bg.png" type="Texture" id=2]
+[ext_resource path="res://gui/asset/font/OpenSans-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://gui/asset/graphic/hud_status_stamina_bg.png" type="Texture" id=4]
+[ext_resource path="res://gui/asset/graphic/hud_status_armor_bg.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+
+font/size = 36
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 3 )
+
+[node name="player_status" type="Control"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 14.0
+script/script = ExtResource( 1 )
+
+[node name="health" type="Node2D" parent="."]
+
+[node name="bg" type="TextureFrame" parent="health"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 132.0
+margin/bottom = 132.0
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="content" type="Label" parent="health"]
+
+rect/min_size = Vector2( 132, 132 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 14.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "0"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="stamina" type="Node2D" parent="."]
+
+editor/display_folded = true
+visibility/visible = false
+
+[node name="bg" type="TextureFrame" parent="stamina"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 132.0
+margin/right = 132.0
+margin/bottom = 264.0
+texture = ExtResource( 4 )
+stretch_mode = 0
+
+[node name="content" type="Label" parent="stamina"]
+
+rect/min_size = Vector2( 132, 132 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 132.0
+margin/right = 132.0
+margin/bottom = 264.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "0"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="armor" type="Node2D" parent="."]
+
+editor/display_folded = true
+visibility/visible = false
+
+[node name="bg" type="TextureFrame" parent="armor"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 264.0
+margin/right = 132.0
+margin/bottom = 396.0
+texture = ExtResource( 5 )
+stretch_mode = 0
+
+[node name="content" type="Label" parent="armor"]
+
+rect/min_size = Vector2( 132, 132 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 264.0
+margin/right = 132.0
+margin/bottom = 396.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "0"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+

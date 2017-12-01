@@ -1,0 +1,241 @@
+[gd_scene load_steps=13 format=1]
+
+[ext_resource path="res://character/character.gd" type="Script" id=1]
+[ext_resource path="res://global/character/data.tscn" type="PackedScene" id=2]
+[ext_resource path="res://world/lighting/spot_128x128.png" type="Texture" id=3]
+[ext_resource path="res://character/criminal/asset/texture/zoimbie1_stand.png" type="Texture" id=4]
+[ext_resource path="res://gui/hud/hit_display/hit.tscn" type="PackedScene" id=5]
+[ext_resource path="res://world/particle/blood.tscn" type="PackedScene" id=6]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 10.0
+height = 20.0
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 40.0
+
+[sub_resource type="CircleShape2D" id=3]
+
+custom_solver_bias = 0.0
+radius = 160.0
+
+[sub_resource type="OccluderPolygon2D" id=4]
+
+closed = true
+cull_mode = 0
+polygon = Vector2Array( -8, -20, -12, -12, -12, -8, -16, 0, -12, 8, -12, 12, -8, 20, 4, 20, 8, 16, 8, 8, 12, 0, 8, -8, 8, -16, 4, -20 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+bg_color = Color( 1, 0, 0, 1 )
+light_color = Color( 1, 0, 0, 1 )
+dark_color = Color( 1, 0, 0, 1 )
+border_size = 0
+border_blend = true
+draw_bg = true
+
+[sub_resource type="StyleBoxFlat" id=6]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+bg_color = Color( 0.4, 0, 0, 1 )
+light_color = Color( 0.4, 0, 0, 1 )
+dark_color = Color( 0.4, 0, 0, 1 )
+border_size = 0
+border_blend = true
+draw_bg = true
+
+[node name="character" type="KinematicBody2D"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+bite = 5
+id = 0
+type = "NPC"
+name = ""
+texture = null
+
+[node name="data" parent="." instance=ExtResource( 2 )]
+
+[node name="footprint" type="Node" parent="."]
+
+[node name="timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 5.0
+one_shot = true
+autostart = false
+
+[node name="collision" type="CollisionShape2D" parent="."]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="interact" type="Area2D" parent="."]
+
+editor/display_folded = true
+input/pickable = true
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitorable = false
+
+[node name="collision" type="CollisionShape2D" parent="interact"]
+
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="detect" type="Area2D" parent="."]
+
+editor/display_folded = true
+input/pickable = true
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.440125, 2.20062 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitorable = false
+
+[node name="collision" type="CollisionShape2D" parent="detect"]
+
+transform/pos = Vector2( 0.440125, 2.20062 )
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[node name="raycast" type="RayCast2D" parent="."]
+
+transform/rot = 90.0
+enabled = false
+cast_to = Vector2( 0, 50 )
+layer_mask = 1
+type_mask = 15
+
+[node name="light" type="Light2D" parent="."]
+
+visibility/opacity = 0.5
+enabled = true
+editor_only = false
+texture = ExtResource( 3 )
+offset = Vector2( 0, 0 )
+scale = 1.0
+color = Color( 0, 0.6, 0, 1 )
+energy = 0.5
+mode = 0
+range/height = 0.0
+range/z_min = -1024
+range/z_max = 1024
+range/layer_min = 0
+range/layer_max = 0
+range/item_mask = 1
+shadow/enabled = false
+shadow/color = Color( 0, 0, 0, 0 )
+shadow/buffer_size = 2048
+shadow/esm_multiplier = 80.0
+shadow/item_mask = 1
+
+[node name="model" type="Sprite" parent="."]
+
+visibility/blend_mode = 1
+texture = ExtResource( 4 )
+
+[node name="shadow" type="LightOccluder2D" parent="model"]
+
+visibility/opacity = 0.0
+visibility/self_opacity = 0.0
+occluder = SubResource( 4 )
+light_mask = 1
+
+[node name="content" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -20.0
+margin/top = -45.0
+margin/right = 20.0
+margin/bottom = -31.0
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="health" type="ProgressBar" parent="."]
+
+visibility/visible = false
+rect/scale = Vector2( 0.5, 0.25 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -16.0
+margin/top = 30.0
+margin/right = 48.0
+margin/bottom = 46.0
+custom_styles/fg = SubResource( 5 )
+custom_styles/bg = SubResource( 6 )
+range/min = 0.0
+range/max = 100.0
+range/step = 1.0
+range/page = 0.0
+range/value = 20.0
+range/exp_edit = false
+range/rounded = true
+percent/visible = false
+
+[node name="wound" type="Node" parent="."]
+
+[node name="impact" type="Position2D" parent="."]
+
+[node name="hit" parent="." instance=ExtResource( 5 )]
+
+margin/left = -64.0
+margin/top = -84.0
+margin/right = 64.0
+margin/bottom = -20.0
+
+[node name="blood" parent="." instance=ExtResource( 6 )]
+
+visibility/visible = false
+config/amount = 64
+config/lifetime = 3.0
+params/initial_size = 3.0
+params/final_size = 1.0
+
+[connection signal="timeout" from="timer" to="." method="_on_timer_timeout"]
+
+[connection signal="body_enter" from="interact" to="." method="_on_interact_body_enter"]
+
+[connection signal="body_exit" from="interact" to="." method="_on_interact_body_exit"]
+
+[connection signal="body_enter" from="detect" to="." method="_on_detect_body_enter"]
+
+[connection signal="body_exit" from="detect" to="." method="_on_detect_body_exit"]
+
+

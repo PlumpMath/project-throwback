@@ -1,0 +1,169 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://gui/menu/main/main.gd" type="Script" id=1]
+[ext_resource path="res://gui/asset/font/OpenSans-Bold.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+
+font/size = 24
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 2 )
+
+[node name="main" type="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+script/script = ExtResource( 1 )
+
+[node name="container" type="VBoxContainer" parent="."]
+
+rect/min_size = Vector2( 256, 768 )
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 256.0
+margin/bottom = 768.0
+custom_constants/separation = 32
+alignment = 0
+
+[node name="btn_game_new" type="Button" parent="container"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 256.0
+margin/bottom = 40.0
+custom_fonts/font = SubResource( 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "New Game"
+flat = false
+
+[node name="btn_game_continue" type="Button" parent="container"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 72.0
+margin/right = 256.0
+margin/bottom = 112.0
+custom_fonts/font = SubResource( 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Continue"
+flat = false
+
+[node name="btn_menu_load" type="Button" parent="container"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 144.0
+margin/right = 256.0
+margin/bottom = 184.0
+custom_fonts/font = SubResource( 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Load"
+flat = false
+
+[node name="spacer1" type="TextureFrame" parent="container"]
+
+rect/min_size = Vector2( 256, 64 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 216.0
+margin/right = 256.0
+margin/bottom = 280.0
+stretch_mode = 0
+
+[node name="btn_menu_settingg" type="Button" parent="container"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 312.0
+margin/right = 256.0
+margin/bottom = 352.0
+custom_fonts/font = SubResource( 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Settings"
+flat = false
+
+[node name="btn_menu_extras" type="Button" parent="container"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 384.0
+margin/right = 256.0
+margin/bottom = 424.0
+custom_fonts/font = SubResource( 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Extras"
+flat = false
+
+[node name="spacer2" type="TextureFrame" parent="container"]
+
+rect/min_size = Vector2( 256, 128 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 456.0
+margin/right = 256.0
+margin/bottom = 584.0
+stretch_mode = 0
+
+[node name="btn_action_quit" type="Button" parent="container"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 616.0
+margin/right = 256.0
+margin/bottom = 656.0
+custom_fonts/font = SubResource( 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Quit"
+flat = false
+
+[connection signal="pressed" from="container/btn_action_quit" to="." method="_on_btn_action_quit_pressed"]
+
+
