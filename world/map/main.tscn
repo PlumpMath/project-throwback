@@ -669,8 +669,6 @@ texture = ExtResource( 26 )
 
 [node name="enemies" type="Node2D" parent="."]
 
-editor/display_folded = true
-
 [node name="1" parent="enemies" groups=[
 "enemies",
 ] instance=ExtResource( 27 )]
@@ -688,7 +686,7 @@ texture = ExtResource( 28 )
 transform/pos = Vector2( -1026.62, -532.112 )
 bite = 4
 id = 1
-name = "Donna Lee"
+name = "Mario Peach"
 texture = ExtResource( 28 )
 
 [node name="3" parent="enemies" groups=[
@@ -698,7 +696,7 @@ texture = ExtResource( 28 )
 transform/pos = Vector2( -3871.23, -609.362 )
 bite = 6
 id = 1
-name = "Donna Lee"
+name = "Dr. Wolfenstein"
 texture = ExtResource( 28 )
 
 [node name="4" parent="enemies" groups=[
@@ -708,7 +706,7 @@ texture = ExtResource( 28 )
 transform/pos = Vector2( -3503.16, -613.906 )
 bite = 6
 id = 1
-name = "Donna Lee"
+name = "Space E. Kev"
 texture = ExtResource( 28 )
 
 [node name="5" parent="enemies" groups=[
@@ -718,7 +716,7 @@ texture = ExtResource( 28 )
 transform/pos = Vector2( -3162.35, -509.391 )
 bite = 4
 id = 1
-name = "Donna Lee"
+name = "Rémi Verschelde"
 texture = ExtResource( 28 )
 
 [node name="6" parent="enemies" groups=[
@@ -728,7 +726,7 @@ texture = ExtResource( 28 )
 transform/pos = Vector2( -3307.76, 49.5338 )
 bite = 8
 id = 1
-name = "Donna Lee"
+name = "Juan Alpaca"
 texture = ExtResource( 28 )
 
 [node name="7" parent="enemies" groups=[
@@ -738,7 +736,7 @@ texture = ExtResource( 28 )
 transform/pos = Vector2( -2444.38, 131.328 )
 bite = 6
 id = 1
-name = "Donna Lee"
+name = "Don Joesonson"
 texture = ExtResource( 28 )
 
 [node name="8" parent="enemies" groups=[
@@ -748,7 +746,7 @@ texture = ExtResource( 28 )
 transform/pos = Vector2( -2594.33, -309.451 )
 bite = 4
 id = 1
-name = "Donna Lee"
+name = "Kato Klause"
 texture = ExtResource( 28 )
 
 [node name="9" parent="enemies" groups=[
@@ -758,7 +756,7 @@ texture = ExtResource( 28 )
 transform/pos = Vector2( -2053.59, -1749.93 )
 bite = 4
 id = 1
-name = "Donna Lee"
+name = "Prof. Bax Pax"
 texture = ExtResource( 28 )
 
 [node name="10" parent="enemies" groups=[
@@ -768,7 +766,7 @@ texture = ExtResource( 28 )
 transform/pos = Vector2( -2448.92, -1595.43 )
 bite = 4
 id = 1
-name = "Donna Lee"
+name = "Dr. Margo Margo"
 texture = ExtResource( 28 )
 
 [node name="11" parent="enemies" groups=[
@@ -778,7 +776,7 @@ texture = ExtResource( 28 )
 transform/pos = Vector2( -2589.79, -1386.4 )
 bite = 6
 id = 1
-name = "Donna Lee"
+name = "Kinnie Kei"
 texture = ExtResource( 28 )
 
 [node name="12" parent="enemies" groups=[
@@ -788,7 +786,7 @@ texture = ExtResource( 28 )
 transform/pos = Vector2( -3494.07, -1772.65 )
 bite = 6
 id = 1
-name = "Donna Lee"
+name = "Billy Bob"
 texture = ExtResource( 28 )
 
 [node name="13" parent="enemies" groups=[
@@ -798,7 +796,7 @@ texture = ExtResource( 28 )
 transform/pos = Vector2( -3462.26, -2681.47 )
 bite = 4
 id = 1
-name = "Donna Lee"
+name = "Mr. Kris"
 texture = ExtResource( 28 )
 
 [node name="14" parent="enemies" groups=[
@@ -808,7 +806,7 @@ texture = ExtResource( 28 )
 transform/pos = Vector2( -2694.31, -2922.31 )
 bite = 4
 id = 1
-name = "Donna Lee"
+name = "Shaun Ski"
 texture = ExtResource( 28 )
 
 [node name="15" parent="enemies" groups=[
@@ -818,7 +816,7 @@ texture = ExtResource( 28 )
 transform/pos = Vector2( -2071.76, -2236.15 )
 bite = 4
 id = 1
-name = "Donna Lee"
+name = "Paloma Marin"
 texture = ExtResource( 28 )
 
 [node name="16" parent="enemies" groups=[
@@ -828,7 +826,7 @@ texture = ExtResource( 28 )
 transform/pos = Vector2( -817.589, -2708.74 )
 bite = 4
 id = 1
-name = "Donna Lee"
+name = "Meghan Hamburger"
 texture = ExtResource( 28 )
 
 [node name="17" parent="enemies" groups=[
@@ -838,7 +836,7 @@ texture = ExtResource( 28 )
 transform/pos = Vector2( 1018.23, -2245.24 )
 bite = 4
 id = 1
-name = "Donna Lee"
+name = "Kitty Pride"
 texture = ExtResource( 28 )
 
 [node name="18" parent="enemies" groups=[

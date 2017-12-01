@@ -49,6 +49,9 @@ func _ready():
 
 func _process(delta):
 
+	if (Input.is_action_pressed("action_esc")):
+		get_tree().quit()
+
 
 	if (ingredients == 5):
 		state_ingredients_complete = true

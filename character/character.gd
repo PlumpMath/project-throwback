@@ -45,7 +45,7 @@ export (Texture) var texture
 
 var direction = Vector2()
 var speed = 0
-const MAX_SPEED = 100
+const MAX_SPEED = 120
 var velocity = Vector2()
 
 
